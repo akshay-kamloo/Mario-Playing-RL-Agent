@@ -10,8 +10,6 @@ The project began as my final project for *ITCS 5156 – Applied Machine Learni
 | Type | Link |
 |------|------|
 | 🔎 **Notebook** | [`MARIO_RL.ipynb`](./MARIO_RL.ipynb) |
-| 🎥 **Video overview** | _coming soon_ |
-| 🎮 **Gameplay demo** | _coming soon_ |
 
 ---
 
@@ -83,14 +81,14 @@ jupyter notebook MARIO_RL.ipynb
 mario‑rl/
 │
 ├── MARIO_RL.ipynb        # end‑to‑end notebook (data‑prep → training → eval)
-├── agents/
-│   └── ddqn.py           # DDQN implementation (actor, optimiser, buffer)
-├── wrappers/
-│   └── mario_wrappers.py # SkipFrame, GrayScaleObservation, ResizeObservation, ...
-├── assets/
-│   ├── reward_curve.png  # training curves
-│   └── demo.gif          # short gameplay GIF
-├── requirements.txt
+   └── agents/
+   │   └── ddqn.py           # DDQN implementation (actor, optimiser, buffer)
+   └── wrappers/
+   │   └── mario_wrappers.py # SkipFrame, GrayScaleObservation, ResizeObservation, ...
+   └── assets/
+   │   ├── reward_curve.png  # training curves
+   │   └── demo.gif          # short gameplay GIF
+   └── requirements          # in the beginning
 └── README.md
 ```
 
@@ -138,7 +136,7 @@ Average return plateaus after ~10 k episodes; level‑completion rate peaks cl
 
 ## Results
 
-![Reward curve](assets/reward_curve.png)
+![Reward curve](reward_cur.jpg)
 
 - **Convergence**: returns stabilise rapidly; extra training chiefly improves *survival time*.  
 - **Sample efficiency**: DDQN needs orders‑of‑magnitude fewer frames than vanilla DQN on identical hardware.  
